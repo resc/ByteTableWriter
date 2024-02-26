@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexTools", "ByteTableWriter\HexTools.csproj", "{5A3230C9-0D97-4287-8336-5BC79634D1B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{44D82F3B-9E01-46DE-9062-AF1F3738DEDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{49F2C0F0-AB83-4B9E-9D16-59A8C5325007}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A3230C9-0D97-4287-8336-5BC79634D1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3230C9-0D97-4287-8336-5BC79634D1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3230C9-0D97-4287-8336-5BC79634D1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3230C9-0D97-4287-8336-5BC79634D1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D82F3B-9E01-46DE-9062-AF1F3738DEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D82F3B-9E01-46DE-9062-AF1F3738DEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D82F3B-9E01-46DE-9062-AF1F3738DEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D82F3B-9E01-46DE-9062-AF1F3738DEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {646D1FFE-E9F3-4123-8247-78EF87472BDB}
+	EndGlobalSection
+EndGlobal

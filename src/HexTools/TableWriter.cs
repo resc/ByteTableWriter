@@ -29,7 +29,7 @@ public class TableWriter : IDisposable
     /// space is also converted to a dot. This class uses a space in the
     /// ascii column to indicate a missing byte.
     /// </summary>
-    private static readonly char[] _printableCharLookup =
+    private static readonly char[] _printableCharMap =
     {
         /*   0 */ '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.',
         /*  16 */ '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.',
@@ -323,7 +323,7 @@ public class TableWriter : IDisposable
         Array.Clear(_asciiColumnBuffer);
     }
 
-    private static char GetChar(byte b) => _printableCharLookup[b];
+    private static char GetChar(byte b) => _printableCharMap[b];
 
     private void TryWriteByteColumnSeparator()
     {

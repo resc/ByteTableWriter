@@ -12,7 +12,7 @@ public static class Hex
     public static void Write(byte[] src, int srcIndex, char[] dst, int dstIndex, int count)
     {
         VerifyOffsetAndCount(src, srcIndex, count, offsetName: nameof(srcIndex));
-        VerifyOffsetAndCount(dst, dstIndex, count*2, offsetName: nameof(dstIndex));
+        VerifyOffsetAndCount(dst, dstIndex, count * 2, offsetName: nameof(dstIndex));
         Write(src.AsSpan(srcIndex, count), dst.AsSpan(dstIndex, count));
     }
 
@@ -31,11 +31,15 @@ public static class Hex
         }
     }
 
+    /// <summary> <see cref="WriteHex(System.IO.TextWriter,byte)"/> is an extension method for
+    /// <see cref="TextWriter"/> to write a single byte</summary>
     public static void WriteHex(this TextWriter tw, byte b)
     {
         tw.Write(new[] { Nibble(b >> 4), Nibble(b) });
     }
 
+    /// <summary> <see cref="WriteHex(System.IO.TextWriter,byte)"/> is an extension method for
+    /// <see cref="TextWriter"/> to write a single byte</summary>
     public static void WriteHex(this TextWriter tw, byte[] bytes, int offset, int count)
     {
         VerifyOffsetAndCount(bytes, offset, count);
@@ -59,7 +63,7 @@ public static class Hex
         var n = nibble & 0x0F;
         return (char)(n > 9 ? n + 0x037 : n + 0x30);
     }
-    
+
 
     private static void VerifyOffsetAndCount<T>(T[] array, int offset, int count, string? offsetName = null, string? countName = null)
     {
@@ -70,3 +74,4 @@ public static class Hex
         if (offset + count >= array.Length) throw new ArgumentOutOfRangeException(countName ?? nameof(count));
     }
 }
+ 
